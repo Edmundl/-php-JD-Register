@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人注册</title>
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+<!-- 刷新页面弹出窗口 -->
+<div id="infoDv">
+	<div id="top">
+		<div id="topleft">
+			京东用户注册协议和隐私
+		</div>
+		<div id="topright">
+			<img src="../images/x.png" onclick="redirect();"/>
+		</div>
+	</div>
+	<div id="content">
+		<p>
+				(1）限制
+禁止将本『软件产品』之拷贝以盈利为目的传播于他人。您不得对本『软件产品』进行反向工程(Reverse engineer)、反向编译(Decompile)或反汇编(Disassemble)。您可以复制本『软件产品』的部分内容，但请注明出处。您必须遵守所有『软件』产品使用之相关法律。此限制如与法律法规冲突，则以法律法规为准。<br>
+（2）终止
+若您未能遵守本『版权声明』之条款或条件，则『北京隆源自动成型系统有限公司』得在不妨碍其他权力之情况下，终止本『版权声明』。届时您必须销毁本『软件产品』之所有拷贝。<br>
+（3）著作权。
+凡与本『软件产品』及其拷贝有关之所有权与著作权均属『北京隆源自动成型系统有限公司』和『北京城市学院智能电子制造研究中心』所有。凡与因透过本『软件产品』而存取之资料内容之所有权以及知识产权，均属各该资料之所有权人，并受相关著作权法或其他知识产权法律与条约之保护。本『许可协议』并不授权您就该等资料之内容享有使用之权力。<br>
+（4）不为瑕疵担保。
+您因使用本『软件产品』所造成之任何损失和风险将由您独自承担。在相关法律所允许之最大范围内，『北京隆源自动成型系统有限公司』及其供应商不承担任何瑕疵担保责任与条件，不论其为明示或默示者，其中包括（但不限于）适合某特定用途以及不侵害他人权益之默示担保责任。<br>
+（5）就衍生性损害不负赔赏责任。
+在相关法律所允许之最大范围内，『北京隆源自动成型系统有限公司』对于您因使用或不能使用本『软件产品』而遭受之特别、衍生性、直接或间接损害（包括，但不限于营业利益之损失、营业中断、数据丢失或其他有形或无形损失）不负任何损害赔赏责任。此项规定不因您事先告知『北京隆源自动成型系统有限公司』或其供应商，该损害发生之可能性而有所不同。在任何情况下，『北京隆源自动成型系统有限公司』或其授权方的责任将绝不超过软件的购买价。如您安装了本『软件产品』则表示您接受上述免责条款和限制声明。<br>
+			</p>
+	</div>
+	<div id="bottom">
+		<input type="button" name="cancel" class="btn c" value="取消" onclick="redirect();">
+		<input type="button" name="sub" class="btn g" value="同意并接受" onclick="agree();">
+	</div>
+</div>
+<!-- 遮罩层 -->
+<div id="coverDv"></div>
+<!-- 悬浮栏 -->
+<div class="xf">
+		<div class="xf-right">
+			<ul class="xf-ul">
+				<li onmouseover="on(1)" onmouseout="out(1)"><img src="../images/1.png" class="xf-img" id="xf-1"></li>
+				<li onmouseover="on(2)" onmouseout="out(2)"><img src="../images/2.gif" class="xf-img" id="xf-2"></li>
+				<li onmouseover="on(3)" onmouseout="out(3)"><img src="../images/3.gif" class="xf-img" id="xf-3"></li>
+				<li onmouseover="on(4)" onmouseout="out(4)"><img src="../images/4.gif" class="xf-img" id="xf-4"></li>
+				<li onmouseover="on(5)" onmouseout="out(5)"><img src="../images/5.gif" class="xf-img" id="xf-5"></li>
+				<li onmouseover="on(6)" onmouseout="out(6)"><img src="../images/6.gif" class="xf-img" id="xf-6"></li>
+			</ul>
+		</div>
+		<div class="xf-left">
+			<div class="lsk" id="lsk1">用户登录</div>
+			<div class="lsk" id="lsk2">购物车</div>
+			<div class="lsk" id="lsk3">收藏</div>
+			<div class="lsk" id="lsk4">历史记录</div>
+			<div class="lsk" id="lsk5">发送消息</div>
+			<div class="lsk" id="lsk6">时间</div>
+		</div>
+	</div>
+<!-- top -->
+<div class="b-top">
+	<div class="b-top1">
+		<img src="../images/1_01.png" class="m-title">
+		<div class="b-top-title">欢迎注册</div>
+		<div class="b-top-login"><font class="text1">已有账号？</font><a href="#">请登录</a></div>
+	</div>
+</div>
+<!-- content -->
+<div class="container">
+	<div class="login">
+		<div class="div-login">
+				<div class="div-user" id="usernameborder">
+					<label style="height: 50px;line-height: 50px;margin-left: 20px; ">用   户   名</label>
+					<!-- <input type="text" id="username" name="username" placeholder="您的账户名和登录名" style="border:0;color: #999; height: 42px; width: 250px;" 
+						onfocus="if(placeholder=='您的账户名和登录名') {placeholder=''}"
+						onblur="checkUser()" /> -->
+					<input type="text" id="username" name="username" placeholder="您的账户名和登录名" style="border:0;color: #999; height: 42px; width: 250px;" 
+						onfocus="if(placeholder=='您的账户名和登录名') {placeholder=''}"
+						onblur="checkUserUnique();"/>
+				</div>
+				<div class="div-kong"><span class="check-span" id="check-username"></span></div>
+
+				<div class="div-user">
+					<label style="height: 50px;line-height: 50px;margin-left: 20px; ">设置密码</label>
+					<input type="password" id="password" name="password1" placeholder="建议至少使用两种字符组合" style="border:0;color: #999;height: 42px; width: 240px;" 
+						onfocus="if(placeholder=='建议至少使用两种字符组合') {placeholder=''}" 
+						onblur="checkPsw()"/>
+				</div>
+				<div class="div-kong"><span class="check-span" id="check-password"></span></div>
+
+				<div class="div-user">
+					<label style="height: 50px;line-height: 50px;margin-left: 20px; ">确认密码</label>
+					<input type="password" id="repassword" name="password2" placeholder="请再次输入密码" style="border:0;color: #999;height: 42px; width: 240px;"
+						onfocus="if(placeholder=='请再次输入密码') {placeholder=''}" 
+						onblur="checkRePsw()"/>
+				</div>
+				<div class="div-kong"><span class="check-span" id="check-repassword"></span></div>
+
+				<div class="div-user">
+					<label style="height: 50px;line-height: 50px;margin-left: 20px; ">中国0086
+						<a><img src="../images/images/icon_28.png" style="width: 15px;height: 15px;cursor: pointer;" /></a>
+					</label>
+					<input type="text" id="phone" name="phone" placeholder="建议使用常用手机" style="border:0;color: #999; height: 42px; width: 220px;" 
+						onfocus="if(placeholder=='建议使用常用手机') {placeholder=''}" 
+						onblur="checkphone()"/>
+				</div>
+				<a href="#" class="div-a">邮箱验证</a>
+				<div class="div-kong"><span class="check-span" id="check-phone"></span></div>
+
+				<div class="div-user">
+					<label style="height: 50px;line-height: 50px;margin-left: 20px; position: relative;bottom:20px;">验  证  码</label>
+					<input type="text" id="test" name="yzm" placeholder="请输入验证码" style="border:0;color: #999;height: 42px; width: 165px;position: relative;bottom:20px;" 
+						onfocus="if(placeholder=='请输入验证码') {placeholder=''}" />
+					<canvas id="canvasImg" class="img" onclick="clickChange()">
+					</canvas>
+				</div>
+				<div class="div-kong"><span class="check-span" id="check-yzm"></span></div>
+				<div class="div-user">
+					<label style="height: 50px;line-height: 50px;margin-left: 20px;">手机验证码</label>
+					<input type="text" id="phoneyzm" name="phoneyzm" placeholder="请输入手机验证码" style="border:0;color: #999;height: 42px; width: 140px;" 
+						onfocus="if(placeholder=='请输入手机验证码') {placeholder=''}" onblur="checkphoneyzm()" />
+					<span style="height: 50px;width:90px;display: inline-block;vertical-align: middle;"><button style="width: 110px;height: 100%;cursor: pointer;">获取验证码</button></span>
+				</div>
+				<div class="div-kong"><span class="check-span" id="check-phoneyzm"></span></div>
+				<button class="div-button" id="register" onclick="CheckForm(this)">立即注册</button>
+				<div id="Check"></div>
+		</div>
+	</div>
+	<div class="container-company">
+		<a href="#" class="company1">
+			<img src="../images/icon_05.gif">
+			<span class="span1">企业用户注册</span>
+		</a>
+		<a href="#" class="company2">
+			<img src="../images/icon_07.gif">
+			<span>INTERNATIONAL<br>CUSTOMERS</span>
+		</a>
+	</div>
+</div>
+<!-- bottom -->
+<div class="bottom-border">
+	<div class="bottom">
+		<ul id="bottom-ul">
+			<li class="bottom-li"><a href="#">关于我们</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">联系我们</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">人才招聘</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">商家入驻</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">广告服务</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">手机京东</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">友情链接</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">销售联盟</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">京东社区</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">京东公益</a></li>
+			<li class="bottom-li">|</li>
+			<li class="bottom-li"><a href="#">English Site</a></li>
+		</ul>
+	</div>
+	<div class="last">Copyright©2004-2016  京东JD.com 版权所有</div>
+</div>
+<script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

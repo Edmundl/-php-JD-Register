@@ -1,0 +1,315 @@
+body{
+	margin:0px;
+	padding: 0px;
+}
+#infoDv{
+	width: 70%;
+	height: 650px;
+	position: fixed;
+	left:15%;
+	top:5%;
+	background: white;
+	z-index: 3;
+}
+#top{
+	height: 30px;
+	line-height: 30px;
+	background: gray;
+}
+#topleft{
+	float: left;
+	margin-left:8px;
+	color:#fff;
+}
+#topright{
+	float: right;
+	margin-right: 10px;
+	cursor: pointer;
+}
+#content{
+	width: 100%;
+	height: 510px;
+	overflow-y: auto;
+	overflow-x: none;
+}
+#content p{
+	margin:20px;
+	font-size: 21px;
+}
+#bottom{
+	text-align: center;
+}
+#coverDv{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.4;
+	z-index: 2;
+}
+.btn{
+	height: 75px;
+	width: 200px;
+	margin-top:15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.c{
+	background: #ccc;
+	border: 0;
+	font-size: 18px;
+}
+.g{
+	background: red;
+	border: 0;
+	color: #fff;
+	font-size: 18px;
+}
+.b-top{
+	height: 103px;
+	box-shadow: 50px;
+	box-shadow: 0 0 10px #999;
+}
+.b-top1{
+	display: block;
+}
+.m-title{
+	float: left;
+	margin-top:28px;
+	margin-left: 10%;
+}
+.b-top-title{
+	float: left;
+	font-size: 24px;
+	margin-top:40px;
+	margin-left: 3%;
+}
+.b-top-login{
+	float: right;
+	margin-top:55px;
+	margin-right: 10%;
+}
+.text1{
+	color: #999;
+}
+.login{
+	width: 56%;
+	height: 600px;
+	float: left;
+	border-right: 1px solid #999;
+	margin-top: 65px;
+}
+.container::after{
+	height: 0;
+	display: block;
+	content: " ";
+	clear: both;
+}
+.div-login{
+	margin-left: 32%;
+}
+.div-user{
+	border: 1px solid #999;
+	height: 50px;
+	width: 360px;
+	z-index: 1;
+}
+.div-kong{
+	height: 30px;
+	width: 360px;
+}
+.div-button{
+	height: 50px;
+	width: 360px;
+	background: #e22;
+	cursor:pointer;
+	color: #fff;
+	font-size: 15px;
+}
+.container-company{
+	float: left;
+	margin-left: 40px;
+	padding-left: 90px;
+	height: 610px;
+	margin-top: 65px;
+}
+.company1{
+	display: block;
+	width: 160px;
+	height: 60px;
+	margin-left: 30px;
+	font-size: 14px;
+	color: #666;
+	border-bottom: solid 1px #ddd;
+}
+.company1 img{
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 16px;
+}
+.company1 span{
+	height: 30px;
+	line-height: 30px;
+}
+.company2{
+	display: block;
+	width: 170px;
+	height: 40px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+.company2 img{
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	margin-right: 16px;
+}
+.company2 span{
+	display: inline-block;
+	float: left;
+}
+.bottom-border{
+	height: 120px;
+	margin-top: 65px;
+}
+.bottom{
+	height: 100px;
+	width: 80%;
+	margin:0 auto;
+	text-align: center;
+	border-top: 1px solid #999;
+}
+.bottom-li{
+	display: inline-block;
+	font-size: 12px;
+	margin-left:6px;
+	color: #999;
+	cursor: pointer;
+}
+.last{
+	height: 15px;
+	text-align: center;
+	color: #999;
+	font-size: 12px;
+	margin-top:-42px;
+}
+div.container-company a:link{
+	text-decoration: none;
+	color: #999;
+}
+div.container-company a:hover{
+	text-decoration: underline;
+	color: #000;
+	font-weight: bolder;
+}
+
+.bottom-li a:link{
+	color: #999;
+	text-decoration: none;
+}
+.bottom-li a:hover{
+	color: #999;
+	text-decoration: underline;
+}
+.bottom-li a:visited{
+	color:#999;
+	text-decoration: none;
+}
+
+.check-span{
+	color: red;
+}
+.div-a{
+	font-size: 12px;
+	text-decoration: none;
+}
+.div-a a:link{
+	color:blue;
+	text-decoration: none;
+}
+.div-a a:hover{
+	text-decoration: underline;
+}
+.div-a a:visited{
+	color:blue;
+	text-decoration: none;
+}
+
+.b-top-login a:link{
+	color: #333;
+	text-decoration: none;
+}
+.b-top-login a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+.b-top-login a:visited{
+	color: #333;
+	text-decoration: none;
+}
+.img{
+	width: 106px;
+	height: 100%;
+	line-height: 25px;
+	margin:0px;
+	padding:0px;
+	background: #333;
+	cursor: pointer;
+}
+
+.xf{
+	position: fixed;
+	top:40%;
+	left:91%;
+	width:130px;
+	height: 140px;
+	border: none;
+}
+.xf-right{
+	width: 23px;
+	height: 140px;
+	float: right;
+	border: none;
+}
+.xf-ul{
+	margin-top: 0px;
+	padding-left: 0px;
+}
+.xf-right li{
+	height: 23px;
+	width: 23px;
+	list-style-type: none;
+	background: #7a6e6e;
+}
+.xf-img{
+	height: 23px;
+	width: 23px;
+}
+.xf-left{
+	float: left;
+	width: 107px;
+	height: 140px;
+	border:none;
+}
+.lsk{
+	height: 23px;
+	width: 107px;
+	line-height: 23px;
+	background: #7a6e6e;
+	text-align: center;
+	visibility: hidden;
+	padding:0px;
+	margin:0px;
+	color:#FFF;
+}
+#Check{
+	color: red;
+	font-weight: 800;
+}
